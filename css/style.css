@@ -22,8 +22,10 @@
 }
 .nav ul li{
     float: left;
+    margin: 0 15px;
 }
 .nav ul li a{
+    /* a是行内元素，所以转为块元素后宽高才起效 */
     display: block;
     height: 42px;
     /* 用padding把文字的宽度撑开 */
@@ -32,4 +34,34 @@
     font-size: 18px;
     color: #050505;
     text-decoration: none;
+}
+.nav ul li a:hover{
+    border-bottom: 2px solid #00a4ff;
+    color: #00a4ff;
+}
+.search{
+    float: left;
+    width: 412px;
+    height: 42px;
+    background-color: skyblue;
+    margin-left: 50px;
+}
+.search input{
+    float: left;
+    width: 345px;
+    height: 40px;
+    border: 1px solid #00a4ff;
+    border-right: none;
+    color: #bfbfbf;
+    font-size: 14px;
+    /* 也可以用缩进text-index: 2em; 来将字体往左边移动 */
+    padding-left: 15px;
+}
+.search button{
+    float: left;
+    width: 50px;
+    height: 42px;
+    background: url(../images/btn.png);
+    /* 去掉按钮button默认边框 */
+    border: 0;
 }

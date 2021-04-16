@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,6 +13,7 @@
     <!-- 引入css样式 -->
     <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
     <div class="header w">
         <!-- logo部分 -->
@@ -26,6 +28,32 @@
                 <li><a href="#">职业规划</a></li>
             </ul>
         </div>
+        <!-- 搜索 -->
+        <div class="search">
+            <!-- 输入关键字可以用  placeholder = "输入关键字" -->
+            <input type="text" value="输入关键字" name="" id="">
+            <!-- 
+                文本框input、表单、单元格、图片都是行内块元素，行内块元素之间有一个默认缝隙
+                解决办法：1.浮动中间无缝隙，可给input、button都加上浮动
+            -->
+            <button></button>
+        </div>
     </div>
+    <script>
+        var text = document.querySelector('input');
+        text.onfocus = function () {
+            if (this.value === "输入关键字") {
+                this.value = '';
+            }
+            this.style.color = '#333';
+        }
+        text.onblur = function () {
+            if (this.value === '') {
+                this.value = '输入关键字';
+            }
+            this.style.color = '#bfbfbf';
+        }
+    </script>
 </body>
+
 </html>
